@@ -1,0 +1,7 @@
+pyotp.totp.TOTP({\
+  key: "cagaraza@gmail.comDPSCHALLENGE",\
+  T0: 120,\
+  X: 0,\
+  algorithm: sha512,\
+  digits: 10,\
+});
