@@ -19,10 +19,10 @@ data=JSON.stringify({
   'notes': 'Model deployed are for the three categories and type insgesamt. SARIMA is utilized due to the time-series nature of data. Training data utilized is until year 2020. Main SDK for data exploration and modeling is Jupyter Notebook. Deployment platform of choice is GCP Gcloud SDK'
 })
 
-var username = 'username';
-var password = secret_key;
-var auth = 'Basic ' + Buffer.from(password);
+
+var auth = 'Basic ' + Buffer.from(secret_key);
 console.log(auth)
+console.log(data)
 const options = {
   auth: auth,
   hostname: 'dps-challenge.netlify.app',
@@ -47,6 +47,5 @@ const req = https.request(options, res => {
 req.on('error', error => {
   console.error(error)
 })
-
 req.write(data)
 req.end()
